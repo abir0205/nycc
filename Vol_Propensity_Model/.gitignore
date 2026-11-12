@@ -1,0 +1,13 @@
+# Credentials -- never commit
+resources/
+*.json.key
+*creds*.json
+
+# Sensitive model scores -- contains VAN IDs
+Output/dvc_scores.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/

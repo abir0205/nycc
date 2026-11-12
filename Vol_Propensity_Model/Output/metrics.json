@@ -1,0 +1,215 @@
+{
+  "model": "xgboost",
+  "source_table": "demsnysp.commons.ml_features_table_v5",
+  "n_rows": 206499,
+  "n_positives": 13662,
+  "base_rate": 0.0661601266834222,
+  "k_frac": 0.005,
+  "dropped_unmatched": true,
+  "candidate_features": [
+    "age_vf",
+    "sex",
+    "household_size",
+    "ethnicity_modeled",
+    "county_name",
+    "us_cong_district_latest",
+    "state_senate_district_latest",
+    "state_house_district_latest",
+    "party_id",
+    "voter_type_id",
+    "person_years_since_earliest_reg",
+    "years_since_earliest_vote",
+    "general_votes_last3",
+    "offyear_votes_last3",
+    "primary_dem_votes_last5",
+    "voted_early_last_general",
+    "longest_gap_years",
+    "vol_yes",
+    "vol_response_tier",
+    "earliest_activity_type",
+    "has_email",
+    "matched_analytics"
+  ],
+  "missing_from_table": [],
+  "final_features": [
+    "general_votes_last3",
+    "offyear_votes_last3",
+    "primary_dem_votes_last5",
+    "voted_early_last_general",
+    "longest_gap_years",
+    "years_since_earliest_vote",
+    "us_cong_district_latest",
+    "state_senate_district_latest",
+    "state_house_district_latest",
+    "vol_yes",
+    "vol_response_tier",
+    "age_vf",
+    "sex",
+    "household_size",
+    "ethnicity_modeled",
+    "county_name",
+    "party_id",
+    "voter_type_id",
+    "person_years_since_earliest_reg"
+  ],
+  "shipped": "selected",
+  "final_n_estimators": 334,
+  "scores_are_out_of_fold": true,
+  "cross_validation": {
+    "roc_auc": 0.8550601183449358,
+    "pr_auc": 0.4576658912036643,
+    "precision@top0.5%": 0.8352713178294574,
+    "lift@top0.5%": 12.624995744434573
+  },
+  "cross_validation_fold_sd": {
+    "roc_auc": 0.004154009851865877,
+    "pr_auc": 0.013218926394469088,
+    "precision@top0.5%": 0.02467624277114336,
+    "lift@top0.5%": 0.37360244026078704
+  },
+  "full_model": {
+    "metrics": {
+      "roc_auc": 0.8554237464657641,
+      "pr_auc": 0.45865924528627094,
+      "precision@top0.5%": 0.8323643410852714,
+      "lift@top0.5%": 12.581057244163919
+    },
+    "fold_sd": {
+      "roc_auc": 0.004237325507254493,
+      "pr_auc": 0.013664625647721768,
+      "precision@top0.5%": 0.030393156975725283,
+      "lift@top0.5%": 0.46018638979998555
+    }
+  },
+  "selected_model": {
+    "metrics": {
+      "roc_auc": 0.8550601183449358,
+      "pr_auc": 0.4576658912036643,
+      "precision@top0.5%": 0.8352713178294574,
+      "lift@top0.5%": 12.624995744434573
+    },
+    "fold_sd": {
+      "roc_auc": 0.004154009851865877,
+      "pr_auc": 0.013218926394469088,
+      "precision@top0.5%": 0.02467624277114336,
+      "lift@top0.5%": 0.37360244026078704
+    },
+    "fold_units": [
+      [
+        "vote_history",
+        "districts",
+        "stated_interest",
+        "age_vf",
+        "sex",
+        "household_size",
+        "ethnicity_modeled",
+        "county_name",
+        "party_id",
+        "voter_type_id",
+        "person_years_since_earliest_reg"
+      ],
+      [
+        "vote_history",
+        "districts",
+        "stated_interest",
+        "age_vf",
+        "sex",
+        "household_size",
+        "ethnicity_modeled",
+        "county_name",
+        "party_id",
+        "voter_type_id",
+        "person_years_since_earliest_reg"
+      ],
+      [
+        "vote_history",
+        "districts",
+        "stated_interest",
+        "age_vf",
+        "sex",
+        "household_size",
+        "ethnicity_modeled",
+        "county_name",
+        "party_id",
+        "voter_type_id",
+        "person_years_since_earliest_reg"
+      ],
+      [
+        "vote_history",
+        "districts",
+        "stated_interest",
+        "age_vf",
+        "sex",
+        "household_size",
+        "ethnicity_modeled",
+        "county_name",
+        "party_id",
+        "voter_type_id",
+        "person_years_since_earliest_reg"
+      ],
+      [
+        "vote_history",
+        "districts",
+        "stated_interest",
+        "age_vf",
+        "household_size",
+        "ethnicity_modeled",
+        "county_name",
+        "party_id",
+        "voter_type_id",
+        "person_years_since_earliest_reg"
+      ]
+    ],
+    "units_folds_kept": {
+      "vote_history": 5,
+      "districts": 5,
+      "stated_interest": 5,
+      "age_vf": 5,
+      "sex": 4,
+      "household_size": 5,
+      "ethnicity_modeled": 5,
+      "county_name": 5,
+      "party_id": 5,
+      "voter_type_id": 5,
+      "person_years_since_earliest_reg": 5
+    }
+  },
+  "ablation": {
+    "stated_interest": {
+      "removed": [
+        "vol_yes",
+        "vol_response_tier"
+      ],
+      "metrics": {
+        "roc_auc": 0.7264233373338584,
+        "pr_auc": 0.16653466829689706,
+        "precision@top0.5%": 0.34108527131782945,
+        "lift@top0.5%": 5.155450698423398
+      },
+      "fold_sd": {
+        "roc_auc": 0.0045596836492047856,
+        "pr_auc": 0.007167923565858015,
+        "precision@top0.5%": 0.030331066702550116,
+        "lift@top0.5%": 0.45760790202215923
+      }
+    },
+    "contact_records": {
+      "removed": [
+        "has_email",
+        "matched_analytics"
+      ],
+      "metrics": {
+        "roc_auc": 0.8556749408782923,
+        "pr_auc": 0.4593429191647743,
+        "precision@top0.5%": 0.8430232558139535,
+        "lift@top0.5%": 12.74216507848965
+      },
+      "fold_sd": {
+        "roc_auc": 0.004256210884100547,
+        "pr_auc": 0.013667916433460775,
+        "precision@top0.5%": 0.027045414130454613,
+        "lift@top0.5%": 0.40951816538284536
+      }
+    }
+  }
+}
