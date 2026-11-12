@@ -73,7 +73,13 @@ The currently active `UNION ALL BY NAME` inputs are:
 2. `nyc_universe_v2`
 3. `non_nyc_universe_v2`
 4. `dscc_targets_v3`
-5. `ny_22_scores`
+5. `ny_01_scores`
+6. `ny_04_scores`
+7. `ny_17_scores`
+8. `ny_18_scores`
+9. `ny_19_scores`
+10. `ny_21_scores`
+11. `ny_22_scores`
 
 `UNION ALL BY NAME` aligns columns by name and retains all records, including duplicates, before deduplication. The `deduped` CTE retains one row per `person_id` and prefers records where `support_score_v1` is non-null. If several rows share that priority, selection is not deterministic because there is no secondary sort key.
 
