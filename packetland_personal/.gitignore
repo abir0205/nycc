@@ -1,0 +1,35 @@
+# --- Credentials: never commit ---
+flows/packetland/resources/
+**/actionid*.json
+**/van.json
+**/*key*.json
+**/credentials*.json
+**/token*.json
+**/token.pickle
+.env
+.env.*
+
+# --- Run output: saved VAN pages, screenshots, summaries ---
+van_automation_artifacts/
+
+# --- Voter data and internal turf data ---
+*.pdf
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# --- Logs ---
+*.log
+
+# --- Python ---
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# --- Editor and OS files ---
+.idea/
+.vscode/
+.DS_Store
+*.zip
