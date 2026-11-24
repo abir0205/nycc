@@ -1,7 +1,7 @@
 
 # NYSDP — Data Science & Engineering Projects
 
-This repository contains a selection of data science, machine learning, and automation projects I developed during my time as **Data and Analytics Director at the New York State Democratic Party** in 2026.
+This repository contains a selection of data science, machine learning, and automation projects I developed during my time as **Data & Analytics Director at the New York State Democratic Party** in 2026.
 
 These projects highlight my experience building predictive models, managing large-scale datasets, developing data pipelines, and automating complex workflows using Python, SQL, and cloud technologies.
 
